@@ -1,7 +1,0 @@
-.DS_Store
-.vscode/
-*.user
-*.suo
-bin/
-obj/
-.env

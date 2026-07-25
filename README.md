@@ -1,231 +1,130 @@
 # Code Meets Reality
 
-> **A personal engineering journey exploring how software connects with the real world.**
+> **Building software that senses, communicates with, and improves the physical world.**
 
-This repository is my long-term learning hub.
+`Code Meets Reality` is my engineering learning hub and portfolio map.
 
-Rather than focusing on a single technology or framework, the goal is to understand how software moves from code running on a computer to systems that interact with people, sensors, devices, and the physical world.
+It connects my experience and interests in software engineering, healthcare, human movement, karate, guitar, accessibility, and physical-security systems through practical projects that cross the boundary between software and hardware.
 
 ---
 
-# Vision
+## System vision
 
-```
-               Code Meets Reality
-
-      Sensors & Human Interaction
-                  │
-                  ▼
-        Embedded Firmware (ESP32)
-                  │
-                  ▼
-     Bluetooth • Wi-Fi • MQTT • USB
-                  │
-                  ▼
-      C# Desktop Applications (.NET)
-                  │
-                  ▼
-      Local Storage (JSON / SQLite)
-                  │
-                  ▼
-      Charts & Data Visualisation
-                  │
-                  ▼
-      Mobile Applications (Future)
-                  │
-                  ▼
-        AI-assisted Experiences
+```mermaid
+flowchart LR
+    A["Physical World<br/>People · Movement · Environment"] --> B["Sensors & Inputs"]
+    B --> C["Firmware<br/>ESP32"]
+    C --> D["Communication<br/>USB · BLE · Wi-Fi · MQTT"]
+    D --> E["C# Applications<br/>WinForms · .NET"]
+    E --> F["Data<br/>JSON · SQLite"]
+    F --> G["Charts & Insight"]
+    G --> H["Useful Feedback<br/>Reminders · Alerts · Learning"]
+    H -. improves .-> A
 ```
 
-The aim is not simply to learn programming.
+The long-term goal is to understand the complete path:
 
-The aim is to understand complete systems—from hardware to software—and build projects that solve real problems.
-
----
-
-# Why this repository exists
-
-My background spans several disciplines:
-
-- 💻 Software Engineering
-- 🏥 Nursing
-- 💪 Myotherapy
-- 🥋 Karate
-- 🎸 Guitar
-- 🔐 Physical Security Systems
-
-Although these seem unrelated, they all share one common theme:
-
-> **Using technology to improve how people interact with the physical world.**
-
-This repository documents that journey.
-
----
-
-# Learning Philosophy
-
-I learn best by building.
-
-Every project should teach something new while solving a genuine problem.
-
-Projects should be:
-
-- useful
-- understandable
-- incremental
-- enjoyable
-- well documented
-- maintainable
-
-The goal is not to collect tutorials.
-
-The goal is to become a better engineer.
-
----
-
-# Current Learning Path
-
-## Stage 1 — Desktop Development
-
-- Modern C#
-- .NET
-- Windows Forms
-- Visual Studio
-- Git
-- JSON
-- SQLite
-
-Current project:
-
-➡️ **Daily Checker**
-
----
-
-## Stage 2 — Embedded Systems
-
-- ESP32
-- GPIO
-- Electronics
-- Sensors
-- Bluetooth
-- Wi-Fi
-
----
-
-## Stage 3 — Connected Devices
-
-- MQTT
-- BLE
-- Serial communication
-- Device protocols
-
----
-
-## Stage 4 — Human Movement
-
-Projects involving:
-
-- Karate
-- Guitar
-- Human movement
-- Biomechanics
-
----
-
-## Stage 5 — Assistive Technology
-
-Projects for improving daily life, including:
-
-- Medication reminders
-- Elderly support
-- Accessibility
-- Physical interfaces
-
----
-
-## Stage 6 — Professional Systems
-
-Exploring concepts used in commercial software:
-
-- Security systems
-- Hardware integration
-- Device management
-- Networking
-- Testing
-- Architecture
-
----
-
-# Projects
-
-| Project                     | Description                                                         | Status         |
-| --------------------------- | ------------------------------------------------------------------- | -------------- |
-| **Daily Checker**           | Accessible Windows desktop application for everyday task management | 🚧 In Progress |
-| **Guitar Humidity Monitor** | ESP32-powered humidity monitor for protecting guitars               | 💡 Planned     |
-| **Medication Reminder**     | Desktop and embedded reminder system                                | 💡 Planned     |
-| **Karate Motion Analyser**  | Human movement analysis using IMU sensors                           | 💡 Planned     |
-| **Guitar Practice Pedal**   | Custom Bluetooth practice controller                                | 💡 Planned     |
-
----
-
-# Repository Structure
-
+```text
+physical event → sensor → firmware → protocol → application → data → useful human action
 ```
+
+---
+
+## Current mission
+
+### 🚧 Daily Checker / まいにち安心
+
+A Japanese Windows desktop application designed to support simple everyday routines for an elderly family member.
+
+- **Repository:** [ShinyaWebDev/daily-checker](https://github.com/ShinyaWebDev/daily-checker)
+- **Current skills:** C#, WinForms, application structure, JSON, accessibility, Git
+- **Next direction:** reliable local persistence, testing, usability refinement, and later integration with a physical “元気です” button
+
+[Read the project page →](projects/daily-checker.md)
+
+---
+
+## Learning journey
+
+```mermaid
+flowchart TD
+    L1["1 · Desktop Foundations<br/>C# · WinForms · Git"] --> L2["2 · Electronics<br/>GPIO · LEDs · Buttons"]
+    L2 --> L3["3 · Firmware<br/>ESP32 · Sensors"]
+    L3 --> L4["4 · Communication<br/>Serial · BLE · MQTT"]
+    L4 --> L5["5 · Data & Visualisation<br/>SQLite · Charts"]
+    L5 --> L6["6 · Assistive Technology"]
+    L6 --> L7["7 · Human Movement"]
+    L7 --> L8["8 · Physical Security Systems"]
+```
+
+[View the full roadmap →](docs/roadmap.md)
+
+---
+
+## Project portfolio
+
+| Project | Real-world purpose | Status | Main learning |
+|---|---|---:|---|
+| [Daily Checker](projects/daily-checker.md) | Accessible daily support | 🚧 Active | C#, WinForms, JSON |
+| [Guitar Humidity Monitor](projects/guitar-humidity-monitor.md) | Protect instruments through environmental monitoring | 🧭 Next | ESP32, sensors, serial/BLE |
+| [Medication Reminder](projects/medication-reminder.md) | Explore accessible physical reminders | 💡 Planned | Buttons, lights, protocols |
+| [Karate Motion Analyser](projects/karate-motion-analyser.md) | Explore repeatable movement data | 💡 Planned | IMU, sampling, charts |
+| [Guitar Practice Pedal](projects/guitar-practice-pedal.md) | Physical control for practice workflows | 💡 Planned | BLE/MIDI, switches |
+
+---
+
+## Knowledge map
+
+| Area | Topics |
+|---|---|
+| [Desktop](knowledge/desktop/README.md) | C#, .NET, WinForms, SQLite, testing |
+| [Embedded](knowledge/embedded/README.md) | ESP32, firmware, GPIO, sensors |
+| [Communication](knowledge/communication/README.md) | Serial, BLE, Wi-Fi, MQTT, protocols |
+| [Hardware](knowledge/hardware/README.md) | Electronics, components, safe prototyping |
+| [Human movement](knowledge/human-movement/README.md) | IMUs, biomechanics, signal interpretation |
+| [Security systems](knowledge/security/README.md) | Inputs, relays, events, controllers |
+| [Engineering practice](knowledge/engineering/README.md) | Git, testing, architecture, documentation |
+
+---
+
+## How this repository is organised
+
+```text
 Code-Meets-Reality/
-│
-├── docs/
-├── desktop/
-├── embedded/
-├── projects/
-├── resources/
-└── journal/
+├── README.md
+├── docs/                  # Vision, roadmap, philosophy and current focus
+├── projects/              # Project summaries and links to code repositories
+├── knowledge/             # Notes organised by engineering domain
+├── journal/               # Dated learning reflections
+├── decisions/             # Engineering decision records
+├── templates/             # Reusable project and experiment templates
+├── resources/             # Books, videos, tools and idea inbox
+└── assets/                # Diagrams and images
 ```
 
-Each project contains its own roadmap, architecture, milestones and learning notes.
+Application source code lives in separate repositories. This repository explains how those projects fit together.
 
 ---
 
-# Technologies
+## Principles
 
-### Desktop
+1. **Build small, testable milestones.**
+2. **Solve a real problem or create genuine enjoyment.**
+3. **Prefer understanding over collecting technologies.**
+4. **Document failures as well as successes.**
+5. **Treat accessibility, privacy, and safety as engineering requirements.**
+6. **Use AI to increase speed without outsourcing judgement.**
 
-- C#
-- .NET
-- Windows Forms
-- SQLite
-
-### Embedded
-
-- ESP32
-- Bluetooth
-- Wi-Fi
-- MQTT
-
-### Development
-
-- Git
-- GitHub
-- Visual Studio
-- VS Code
+[Read the learning philosophy →](docs/philosophy.md)
 
 ---
 
-# Long-Term Goal
+## Latest progress
 
-To become an engineer capable of designing complete systems that connect software with the physical world.
-
-Rather than specialising in only web development, desktop development, or embedded programming, this journey explores how these disciplines work together to build practical, reliable, and meaningful solutions.
+See the [engineering journal](journal/README.md) and [current focus](docs/current-focus.md).
 
 ---
 
-## Current Focus
+## Repository status
 
-🚧 **Daily Checker**
-
-Repository:
-
-👉 https://github.com/ShinyaWebDev/daily-checker
-
----
-
-_"Every great system starts with understanding one small piece at a time."_
+This repository is in its first structured version. It will evolve alongside the projects it documents.
